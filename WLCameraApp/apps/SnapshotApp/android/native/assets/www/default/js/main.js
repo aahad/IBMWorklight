@@ -18,7 +18,7 @@ function wlCommonInit(){
 }
 
 function onSuccess(imageData) {
-	alert( imageData );
+	 
 	var smallImage = document.getElementById('ImgPlaceholder'); 
 	smallImage.style.display = 'block';
 	smallImage.src = imageData;
@@ -30,7 +30,7 @@ function onFail(message) {
 
 //Use from Camera
 $("#takePictureBtn").on("touchend", function() {
-	alert("taking pic");
+	 
 	navigator.camera.getPicture(onSuccess, onFail, { 
 		quality: 50,
 		sourceType: Camera.PictureSourceType.CAMERA,
@@ -41,7 +41,7 @@ $("#takePictureBtn").on("touchend", function() {
 
 //Use from Library
 $("#openGalleryBtn").on("touchend", function() {
-	alert("browser gallery");
+	 
 	navigator.camera.getPicture(onSuccess, onFail, { 
 		quality: 50,
 		sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
